@@ -1,3 +1,8 @@
-# AMAR SHOP
+# React reuseable template
 
-coming SOON....
+# Used technologies
+
+- React
+- React-router-dom
+- React-Helmet
+- Module Scss
