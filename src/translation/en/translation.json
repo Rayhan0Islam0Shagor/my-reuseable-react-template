@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "1": "Home",
+    "2": "Cart",
+    "3": "User",
+    "4": "AMAR SHOP"
+  },
+  "home": {
+    "1": "Home"
+  },
+  "cart": {
+    "1": "Cart"
+  },
+  "text": {
+    "1": "Home",
+    "2": "Welcome"
+  }
+}

@@ -1,24 +1,25 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // import icons
-import { GoSearch } from "react-icons/go";
-import { RiShoppingCart2Line } from "react-icons/ri";
-import { AiOutlineUser } from "react-icons/ai";
-import { MdMenu, MdClose } from "react-icons/md";
+import { GoSearch } from 'react-icons/go';
+import { RiShoppingCart2Line } from 'react-icons/ri';
+import { AiOutlineUser } from 'react-icons/ai';
+import { MdMenu, MdClose } from 'react-icons/md';
 
 // import styles
-import { Container } from "react-bootstrap";
-import styles from "./Navbar.module.scss";
+import { Container } from 'react-bootstrap';
+import styles from './Navbar.module.scss';
 
 // import components
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from './Sidebar/Sidebar';
+import LanguageSwitcher from '../../LanguageSwitcher/LanguageSwitcher';
 
 // load pages by on hover (Eager Loading)
-const home = () => import("../../../routes/Home");
-const cart = () => import("../../../routes/Cart");
+const home = () => import('../../../routes/Home');
+const cart = () => import('../../../routes/Cart');
 
-const Navbar = () => {
+const Navbar = ({ t, i18n }) => {
   const [sidebar, setSidebar] = useState(false);
 
   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
           <div className={styles.nav}>
             <div className={styles.logo}>
               <Link to="/" onMouseOver={() => home()}>
-                <h2>AMAR SHOP</h2>
+                <h2>{t('nav.4')}</h2>
               </Link>
             </div>
 
@@ -49,11 +50,13 @@ const Navbar = () => {
                   className={styles.cartQuantity}
                 >
                   <RiShoppingCart2Line className={styles.cartQuantityIcon} />
-                  cart <span>0</span>
+                  {t('nav.2')} <span>0</span>
                 </Link>
               </p>
               <AiOutlineUser className={styles.icon} />
             </div>
+
+            <LanguageSwitcher t={t} i18n={i18n} />
 
             <div
               className={styles.hamburger}

@@ -1,8 +1,8 @@
-import styles from "./HomePage.module.scss";
+import styles from './HomePage.module.scss';
 
-const HomePage = () => (
+const HomePage = ({ t }) => (
   <main className={styles.home}>
-    <h1>Home</h1>
+    <h1>{t('home.1')}</h1>
   </main>
 );
 

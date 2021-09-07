@@ -1,9 +1,9 @@
-import styles from "./CartPage.module.scss";
+import styles from './CartPage.module.scss';
 
-const CartPage = () => {
+const CartPage = ({ t }) => {
   return (
     <div className={styles.cart}>
-      <h1>Cart Page</h1>
+      <h1>{t('cart.1')}</h1>
     </div>
   );
 };

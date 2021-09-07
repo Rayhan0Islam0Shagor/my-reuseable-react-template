@@ -1,14 +1,16 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Loading from "./components/Loading/Loading";
+import { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+// import components
+import Loading from './components/Loading/Loading';
 
 // bootstrap styles
-import "./App.scss";
+import './App.scss';
 
 // routes (Code Splitting and Pre-fetching)
-const Cart = lazy(() => import("./routes/Cart"));
-const Home = lazy(() => import("./routes/Home"));
-const NotFound = lazy(() => import("./routes/NotFound"));
+const Cart = lazy(() => import('./routes/Cart'));
+const Home = lazy(() => import('./routes/Home'));
+const NotFound = lazy(() => import('./routes/NotFound'));
 
 function App() {
   return (
