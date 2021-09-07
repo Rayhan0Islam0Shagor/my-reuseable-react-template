@@ -5,16 +5,12 @@ import i18n from './i18n';
 
 import './index.scss';
 import App from './App';
-import { UserContext } from './utils/context/UserContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <UserContext.Provider>
-      <I18nextProvider i18n={i18n}>
-        <App />
-      </I18nextProvider>
-    </UserContext.Provider>
-  </React.StrictMode>,
+  <I18nextProvider i18n={i18n}>
+    <App />
+  </I18nextProvider>,
+
   document.getElementById('root')
 );
 
